@@ -1,0 +1,982 @@
+/*!****************************************************************************
+
+ * jQuery UI Custom Skin
+
+ * @author CDG Apps Developers
+
+ *
+
+ * This stylesheet applies the NI-specific styles to the jQueryUI widgets.
+
+ * Please remember to follow the jQueryUI development guidlines where possible
+
+ *
+
+ * NOTE: these styles assume that the default jQueryUI styles *are not* present
+
+ *****************************************************************************/
+
+
+
+/**
+
+ * Dialog Widget
+
+ */
+
+
+
+.ui-dialog {
+
+	box-shadow: 0px 3px 3px #333;
+
+	-moz-box-shadow: 0px 3px 3px #333;
+
+	-webkit-box-shadow: 0px 3px 3px #333;
+
+	border-bottom-left-radius: 5px;
+
+	border-bottom-right-radius: 5px;
+
+  #ie10 { z-index: 1002!important };
+}
+
+
+
+.ui-dialog .ui-dialog-titlebar-close {
+
+	position: absolute;
+
+	right: 7px;
+
+	top: 7px;
+
+	display: block;
+
+}
+
+
+
+.ui-icon {
+
+	display: block;
+
+	text-indent: -99999px;
+
+	overflow: hidden;
+
+	background-repeat: no-repeat;
+
+	background: url("images/ui-icons.png") 0 0 no-repeat;
+
+	width: 19px;
+
+	height: 19px;
+
+}
+
+
+
+.ui-dialog-titlebar-close .ui-icon{
+
+	background-position: 5px 0;
+
+}
+
+
+
+.ui-dialog-titlebar-close .ui-icon:hover{
+
+	background-position: -50px 0;
+
+}
+
+
+
+.ui-dialog-titlebar-close .ui-icon:active{
+
+	background-position: -120px 0;
+
+}
+
+
+
+
+
+.ui-dialog .ui-dialog-titlebar {
+
+	background: url("images/modal-window-header-x.png") repeat-x 0 0;
+
+	padding-left: 12px;
+
+	border-top-left-radius:5px;
+
+	border-top-right-radius:5px;
+
+	height: 28px;
+
+	border: 1px solid #333;
+
+	border-bottom: none
+
+	-moz-border-radius-topleft :5px;
+
+	-moz-border-radius-topright:5px; 
+
+	-webkit-border-top-left-radius: 5px;
+
+	-webkit-border-top-right-radius:5px;	
+
+	box-shadow: inset 0 1px 1px #FFF;
+
+	-webkit-box-shadow: inset 0 1px 1px #FFF;
+
+	-moz-box-shadow: inset 0 1px 1px #FFF;
+
+}
+
+
+
+.ui-dialog .ui-dialog-title {
+
+	font-size: 12px;
+
+	color: #fff;
+
+	font-weight: bold;
+
+	margin-right: 30px;
+
+	line-height: 28px;
+
+}
+
+
+
+.ui-dialog .ui-dialog-content {
+
+	width: inherit;
+
+	background-color: #FFF;
+
+	padding: 12px;
+
+	overflow: hidden;
+
+	border: 1px solid #333;
+
+	border-top: none;
+
+	border-bottom-left-radius:5px;
+
+	border-bottom-right-radius:5px;
+
+	-moz-border-radius-bottomleft :5px;
+
+	-moz-border-radius-bottomright:5px; 
+
+	-webkit-border-bottom-left-radius: 5px;
+
+	-webkit-border-bottom-right-radius:5px;
+
+}
+
+
+
+.ui-widget-overlay {
+
+	background: #000;
+
+	position:absolute;
+
+	top:0;
+
+	left:0;
+
+	opacity : .7;
+
+	filter:alpha(opacity=70);
+
+  #ie10 { z-index: 1001!important };
+}
+
+
+
+
+/******** 
+
+
+
+Dialog Triggers Supported
+
+images and video
+
+
+
+ ********/
+
+
+
+.ui-dialog-trigger{
+
+	position: relative;
+
+}
+
+
+
+.ui-dialog-trigger .trigger-video{
+
+	height: 100%;
+
+	width: 100%;
+
+	display: block;
+
+	position: relative;
+
+	background: url('images/modal-trigger2.png') 51% 50% no-repeat;
+
+	-webkit-border-radius: 8px;
+
+	-moz-border-radius: 8px;
+
+	border-radius: 8px;
+
+}
+
+.ui-dialog-trigger .trigger-img{
+
+	height: 100%;
+
+	width: 100%;
+
+	display: block;
+
+	position: relative;
+
+	background: url('images/modal-trigger-image.png') 51% 50% no-repeat;
+	
+	background-position: top right;
+
+	-webkit-border-radius: 8px;
+
+	-moz-border-radius: 8px;
+
+	border-radius: 8px;
+
+}
+
+
+
+.ui-dialog-trigger .trigger-video:hover, 
+
+.ui-dialog-trigger .trigger-img:hover
+
+{
+
+	position: relative;
+
+	cursor: pointer;
+
+}
+
+
+
+.ui-dialog-trigger .trigger-video:hover{
+
+	background: url('images/modal-trigger2-hover.png') 51% 50% no-repeat;
+
+}
+
+
+
+.ui-dialog-trigger .trigger-img:hover{
+
+	/*background: url('images/modal-trigger2.png') 51% 50% no-repeat;*/
+
+}
+
+
+/***************************************************
+ * Loading modal styles
+ * *************************************************/
+.loading-modal
+{
+    display:block;
+    text-align: center;
+}
+
+.loading-modal-container .ui-dialog-titlebar
+{
+    display:none!important;
+    height:1px;
+}
+
+.loading-modal-container .ui-dialog-content
+{
+    background-color: #ffffff;
+		background-image: url('/widgets/jqueryui/1.9.2/css/ni/images/processing.gif');
+    background-repeat: no-repeat;
+		background-position: 50% 24px;
+    background: url('/widgets/jqueryui/1.9.2/css/ni/images/processing.gif') no-repeat 50% 24px, #e5e5e5; /* FF3.6+ */
+    -pie-background: url('/widgets/jqueryui/1.9.2/css/ni/images/processing.gif') no-repeat 50% 24px, #e5e5e5; /* PIE */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border:1px solid #666666;
+    padding:115px 24px 24px 24px;
+    color:#666666;
+    -moz-box-shadow: 0px 3px 8px 0px #525252;
+    box-shadow: 0px 3px 8px 0px #525252;
+    -webkit-box-shadow: 0px 3px 8px 0px #525252;
+}
+
+.loading-modal-container .ui-dialog-content H1
+{
+    font-weight: bold;
+    font-style: italic;
+    color:#333333;
+    font-size: 1.3em;
+}
+
+.loading-modal-container .ui-dialog-content .quick-tip
+{
+  background-color: #f6f6f6;
+  position:absolute;
+  top:98%;
+  min-height:63px;
+  left:0;
+  width:100%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.loading-modal-container .ui-dialog-content .quick-tip-content
+{
+  text-align: center;
+  padding:18px 12px 24px 12px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border:1px solid #666666;
+  border-top-color: #000000;
+}
+
+/***************************************************
+ * Tooltip styles
+ * *************************************************/
+
+.pnx-tooltip-content
+{
+  display: none;
+}
+
+.ui-tooltip,
+.arrow:after
+{
+  background-color:#ffffff;
+  border:1px solid #989898;
+  border-radius:6px;
+  -moz-border-radius:6px;
+  -webkit-border-radius:6px;
+  max-width:220px;
+  padding:6px;
+  z-index:1010;
+}
+
+.ui-tooltip
+{
+  position:absolute;
+  box-shadow: 0px 3px 3px 0px #666666;
+  -moz-box-shadow: 0px 3px 3px 0px #666666;
+  -webkit-box-shadow: 0px 3px 3px 0px #666666;
+}
+
+.arrow {
+  width: 18px;
+  height: 10px;
+  overflow: hidden;
+  position: absolute;
+  left: 24px;
+  margin-left: 0px;
+  bottom: -10px;
+}
+
+.arrow.top {
+  top: -10px;
+  bottom: auto;
+}
+
+.arrow.left {
+  left: 24px;
+}
+.arrow:after
+{
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: -20px;
+  width: 16px;
+  height: 7px;
+  border-radius: 0px;
+  -moz-border-radius:0px;
+  -webkit-border-radius:0px;
+  box-shadow: 0px 3px 3px 0px #666666;
+  -moz-box-shadow: 0px 3px 3px 0px #666666;
+  -webkit-box-shadow: 0px 3px 3px 0px #666666;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  tranform: rotate(45deg);
+}
+
+.arrow.top:after {
+  bottom: -20px;
+  top: auto;
+  left: -3px;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+/******** Legacy Coreblock Size included ********/
+
+.smCoreBlock, .lgCoreBlock{
+
+	-webkit-border-radius: 8px;
+
+	-moz-border-radius: 8px;
+
+	border-radius: 8px;
+
+}
+
+
+
+.lgCoreBlock{
+
+	width: 215px;
+
+	height: 161px;
+
+}
+
+.smCoreBlock{
+
+	width: 112px;
+
+	height: 84px;
+
+}
+
+
+
+/*
+
+ * Dialog Media styles
+
+ */
+
+.dialog-media .ui-dialog-title, .dialog-media .ui-dialog-titlebar, .dialog-media .ui-dialog-titlebar-close {
+
+	display:none;
+
+}
+
+
+
+.dialog-media .ui-dialog-content {
+
+	border-top-left-radius:5px;
+
+	border-top-right-radius:5px;
+
+	-moz-border-radius-topleft :5px;
+
+	-moz-border-radius-topright:5px; 
+
+	-webkit-border-top-left-radius: 5px;
+
+	-webkit-border-top-right-radius:5px;
+
+}
+
+
+
+/* 
+
+ * Custom Loader Dialog 
+
+ */
+
+.ui-dialog-loader .ui-helper-hidden, .loader .ui-dialog-titlebar {display:none;}
+
+.ui-dialog-loader .ui-widget-content { color: #FFF; font:1.1em bold arial, helvetica, sans-serif; }
+
+.ui-dialog-loader.ui-widget-overlay { background: #FFFFFF 50% 50%; opacity: .80;filter:Alpha(Opacity=80);position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.ui-dialog-loader .ui-dialog-content {padding:0 10px 10px; -moz-border-radius:10px; border-radius: 10px; min-height:14px !important;}
+
+.ui-dialog-loader.ui-dialog {position:fixed !important; padding:29px 65px; border:1px solid #FFF; background-color:#065FA3; width:auto !important;box-shadow:1px 0px 16px #000;-webkit-box-shadow:1px 0px 16px #000;-moz-box-shadow:1px 0px 16px #000000;border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+
+
+
+/**
+
+ * Tabs Widget
+
+ */
+
+.ui-tabs .ui-tabs-nav {
+
+	padding:0;
+
+	margin:0;
+
+	list-style: none;
+
+	*display:inline-block; /* IE7 hack */
+
+}
+
+
+
+.ui-tabs .ui-tabs-nav:after {
+
+	content: ".";
+
+	display: block;
+
+	clear: both;
+
+	visibility: hidden;
+
+	line-height: 0;
+
+	height: 0;
+
+	_height: 1%; /* IE6 hack */
+
+}
+
+
+
+html[xmlns] .ui-tabs .ui-tabs-nav {
+
+	display: block;
+
+}
+
+
+
+.ui-tabs .ui-tabs-nav li {
+
+	font-size:12px;
+
+	float:left;
+
+	margin-right:4px;
+
+	margin-left:0;
+
+	margin-top:5px;
+
+	position:relative;
+
+	top:1px;
+
+	_top:2px; /* IE6 hack */
+
+	*top:2px; /* IE7 hack */
+
+	list-style-type:none;
+
+	border:1px solid #CCC;
+
+	border-bottom:none;
+
+	border-top-left-radius:5px;
+
+	border-top-right-radius:5px;
+
+	-moz-border-radius-topleft :5px;
+
+	-moz-border-radius-topright:5px; 
+
+	-webkit-border-top-left-radius: 5px;
+
+	-webkit-border-top-right-radius:5px;
+
+}
+
+
+
+.ui-tabs .ui-tabs-nav li, .ui-tabs .ui-tabs-nav li a, .ui-tabs .ui-tabs-nav li a span {
+
+	cursor:pointer;
+
+}
+
+
+
+.ui-tabs .ui-tabs-nav li a {
+
+	padding:2px 16px;
+
+	color:#000;
+
+	outline:none;
+
+	text-decoration:none;
+
+}
+
+
+
+.ui-tabs .ui-tabs-nav li a, .ui-tabs .ui-tabs-nav li span {
+
+	display:block;
+
+}
+
+
+
+.ui-tabs .ui-state-hover {
+
+	background:transparent url(images/tabs.png) repeat-x 0 0;
+
+	border-bottom:1px solid #ccc;
+
+}
+
+
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+
+	background:transparent url(images/tabs.png) repeat-x 0 0;
+
+	position:relative;
+
+	top:1px;
+
+	margin-top:0;
+
+}
+
+
+
+.ui-tabs .ui-tabs-nav li{
+
+	margin-bottom: 0;
+
+}
+
+
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+
+	font-weight:bold;
+
+	position:relative;
+
+	padding-top:8px;
+
+	top:-1px;
+
+}
+
+
+
+.ui-tabs .ui-tabs-panel {
+
+	padding:12px;
+	
+	display: block;
+
+	background:transparent url(images/tabs.png) repeat-x 0 -26px;
+
+	border:1px solid #CCC;
+
+	border-bottom-left-radius:5px;
+
+	border-bottom-right-radius:5px;
+
+	border-top-right-radius:5px;
+
+	-moz-border-radius-bottomleft :5px;
+
+	-moz-border-radius-bottomright:5px; 
+
+	-moz-border-radius-topright :5px;
+
+	-webkit-border-bottom-left-radius: 5px;
+
+	-webkit-border-bottom-right-radius:5px;
+
+	-webkit-border-top-right-radius:5px;
+
+}
+
+/*for RMS tabs */
+.region .ui-tabs .ui-tabs-panel {
+
+	border:1px solid #CCC !important;
+}
+
+ 
+.ui-tabs .ui-tabs-hide {
+
+	display:none;
+
+}
+
+
+
+/* Bottom tabs, places the tabs at the bottom of the container */
+
+.ui-tabs-bottom {
+
+	position:relative;
+
+	zoom:1;
+
+}
+
+
+
+.ui-tabs-bottom .ui-tabs-panel {
+
+	background:#fff;
+
+	border-top-left-radius:5px;-moz-border-radius-topleft :5px;-webkit-border-top-left-radius: 5px;
+
+	border-bottom-left-radius:0;-moz-border-radius-bottomleft :0;-webkit-border-bottom-left-radius: 0;
+
+}
+
+
+
+.ui-tabs-bottom .ui-tabs-nav {
+
+	position:absolute;
+
+	top:100%;
+
+}
+
+
+
+.ui-tabs-bottom .ui-tabs-nav li {
+
+	background: transparent url(/widgets/jqueryui/1.8.5/css/ni/images/tabs-bottom.png) repeat-x 0 100%; 
+
+	top:0;
+
+	margin-top:0;
+
+	border-bottom:1px solid #ccc;
+
+	border-top:none;
+
+	border-top-left-radius:0;-moz-border-radius-topleft: 0;-webkit-border-top-left-radius: 0;
+
+	border-top-right-radius:0;-moz-border-radius-topright: 0;-webkit-border-top-right-radius: 0;
+
+	border-bottom-left-radius:5px;-moz-border-radius-bottomleft:5px;-webkit-border-bottom-left-radius:5px;
+
+	border-bottom-right-radius:5px;-moz-border-radius-bottomright:5px;-webkit-border-bottom-right-radius:5px;
+
+}
+
+
+
+.ui-tabs-bottom .ui-tabs-nav li.ui-tabs-active {
+
+	background:#fff;
+
+	top:-1px;
+
+	margin-top:0;
+
+}
+
+
+
+/**
+
+ * Accordion Widget Home
+
+ */
+
+
+
+.ui-accordion-container{
+
+	background: #CCC;
+
+	border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;
+
+	padding: 6px;
+
+}
+
+
+
+.ui-accordion-home .ui-accordion-panel{
+
+	position: relative;
+
+	margin-bottom: 6px;
+
+	background: #FFF url("images/accordion-header.png") 0 top repeat-x;
+
+	-moz-border-radius: 5px; 
+
+	-webkit-border-radius: 5px; 
+
+	border-radius: 5px;
+
+	border-top: 1px solid #efefef;
+
+	border-bottom: 1px solid #bbb;
+
+}
+
+
+
+.ui-accordion-home .last{
+
+	margin-bottom: 0px;
+
+}
+
+
+
+.ui-accordion-home .ui-icon{
+
+	height: 12px;
+
+	width: 12px;
+
+	display: block;
+
+	overflow: hidden;
+
+	background: url("images/accordion-icon-sprite.png") 0 0 no-repeat;
+
+}
+
+.ui-accordion-home .ui-state-active .ui-icon{
+
+	background: url("images/accordion-icon-sprite.png") 0 -20px no-repeat;
+
+}
+
+
+
+.ui-accordion-home .ui-accordion-header{
+
+	cursor: pointer;		    
+
+	margin-bottom: 0;
+
+	
+
+}
+
+.ui-accordion-header .ui-icon
+{
+  display:inline-block;
+}
+
+
+
+.ui-accordion-home .ui-accordion-header.ui-state-active{
+
+	background: #fff;
+
+	border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 	
+
+}
+
+
+
+.ui-accordion-home .ui-accordion-header .ui-icon {
+
+	position: absolute;
+
+	left: 6px;
+
+    top: 6px;
+
+}
+
+
+
+.ui-accordion-home .ui-accordion-header a{
+
+	display: block;
+
+	font-size: 12px;
+
+	*line-height: 12px;
+
+	height: 12px;
+
+	color: #333;
+
+	padding: 6px 6px 6px 24px;
+
+}
+
+
+
+.ui-accordion-icon-right{
+
+	position: absolute;
+
+	top: 6px;
+
+	right: 6px;
+
+	_right: 12px;
+
+	z-index: 1;
+
+}
+
+/**
+
+ * Accordion Widget
+
+ */
+
+
+
+.ui-accordion .ui-accordion-content{
+
+	display: none;	
+
+	overflow: hidden;
+
+	padding: 0 6px 6px 6px;
+
+	position: relative;
+
+}
+
+
+
+.ui-accordion .ui-accordion-content-active{
+
+	display: block;
+
+}
+
+
+.ui-front, .ui-dialog {
+    overflow: auto;
+   /* z-index: 1000000 !important;*/
+}
+
+
