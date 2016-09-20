@@ -1,0 +1,253 @@
+/*
+ * Phoenix CSS
+ * @author Keegan Watkins
+ * @coauthor Levi Sitters
+ * Styles for global defaults
+ */
+
+/* RESET (http://developer.yahoo.com/yui/reset/#code) */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,
+p,blockquote,th,td { margin:0;padding:0; }
+table { border-collapse:collapse;border-spacing:0; }
+fieldset,img,abbr,acronym { border:none; }
+address,caption,cite,code,dfn,th,var,i { font-style:normal;font-weight:normal; }
+caption,th { text-align:left; }
+h1,h2,h3,h4,h5,h6 { font-size:100%;font-weight:normal; }
+q:before,q:after { content:''; }
+html {
+    overflow-y:scroll; /* Force vertical scrollbar */
+    -webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0
+}
+
+/* TYPOGRAPHY */
+body { font-size:12px; font-family: Arial, Helvetica, sans-serif;}
+
+ul,
+ol {
+  padding: 0;
+  margin-left: 25px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+li {
+  line-height: 15px;
+  margin-bottom: 6px
+}
+/* -- removing because it's taking bullets off other pages
+#shop-app ul{
+    list-style: none;
+    margin-left: 0;
+}*/
+
+ul.unstyled, ul.pnx-list
+ol.unstyled, ol.pnx-list
+{ /* pnx-list included for flex */
+  margin-left: 0;
+  list-style: none;
+}
+li.unstyled{list-style: none;}
+
+ul.unstyled ul{
+    margin-left: 25px;
+}
+
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+}
+
+ul.inline > li,
+ol.inline > li {
+  display: inline-block;
+  *display: inline;
+  padding-right: 6px;
+  *zoom: 1;
+}
+
+ul.inline.pipe li + li::before {
+    content: " | ";
+    color: #999;
+    margin: 0 6px 0 0;
+}
+
+
+h1 { font-size:20px; }
+h2 { font-size:16px; }
+h3 { font-size:14px; }
+h1, h2, h3, h4, h5, h6 { font-weight:bold;}
+h1 dfn, h2 dfn, h3 dfn{
+	font-size: 16px;
+	display: block;
+	margin-top: 6px;
+}
+h2 dfn, h3 dfn{
+	font-size: 12px;
+}
+
+h1 dl, h2 dl, h3 dl{
+	font-size: 12px;
+    font-weight: normal;
+	display: inline-block;
+}
+
+
+hr{
+    height: 1px;
+    color: #CCC;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+  background-color: #cccccc;
+  border:none;
+}
+
+p { line-height:1.25; }
+a { color:#065fa3; text-decoration:none; }
+a:hover { text-decoration:underline; }
+dt { font-weight:bold; }
+dd { margin-bottom:6px; line-height:1.25; padding-left:6px; }
+
+/* White space */
+h2, h3, h4, h5, h6, p, ul, ol, img {margin-bottom:6px;}
+h1{margin-bottom: 18px;}
+
+
+/* FLOATS */
+.left { float:left; }
+.right { float:right; }
+.clear { clear:both; }
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+
+/* GRIDS */
+.grid1 { width:50px; }
+.grid2 { width:112px; }
+.grid3 { width:174px; }
+.grid4 { width:236px; }
+.grid5 { width:298px; }
+.grid6 { width:360px; }
+.grid7 { width:422px; }
+.grid8 { width:484px; }
+.grid9 { width:546px; }
+.grid10 { width:608px; }
+.grid11 { width:670px; }
+.grid12 { width:732px; }
+.grid13 { width:794px; }
+.grid14 { width:856px; }
+.grid15 { width:918px; }
+.grid16 { width:980px; }
+
+/* GUTTERS */
+.gutter-outer { margin-left:12px; margin-right:12px; }
+.gutter-outer-l { margin-left:12px; }
+.gutter-outer-r { margin-right:12px; }
+.gutter-inner { padding-left:12px; padding-right:12px; }
+.gutter-inner-l { padding-left:12px; }
+.gutter-inner-r { padding-right:12px; }
+
+/* DISPLAY */
+.block { display:block; }
+.inline { display:inline; }
+.inline-block {display: inline-block;}
+.center { text-align:center; }
+
+/* POSITION */
+.relative {position: relative;}
+.absolute{position: absolute}
+.fixed{position: fixed}
+
+/* FLUID COLUMNS */
+.col1of2 { width:50%; }
+.col1of3 { width:33.333333%; }
+*+html .col1of3 {  width:33.3%; }
+.col2of3 { width:66.666666%; }
+.col1of4 { width:25%; }
+.col3of4 { width:75%; }
+
+
+/* Text Decorations */
+.black100{color: #000;}
+.black80{color: #333;}
+.black60{color: #666;}
+.black40{color: #999;}
+.green100{color:#090;}
+.red100{color:#F00;}
+
+.font-size-s{font-size: 11px;}
+.text-strike {text-decoration:line-through;}
+.text-align-right{text-align: right}
+.text-align-left{text-align: left}
+.unbold{font-weight:normal;}
+/* Number Container */
+.stepnum-container
+{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.stepnum-container .stepnum
+{
+  margin-right:9px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  border: 1px solid #7DACCE;
+  white-space: nowrap;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-image: linear-gradient(top, rgb(219,232,242) 39%, rgb(169,200,223) 70%);
+  background-image: -o-linear-gradient(top, rgb(219,232,242) 39%, rgb(169,200,223) 70%);
+  background-image: -moz-linear-gradient(top, rgb(219,232,242) 39%, rgb(169,200,223) 70%);
+  background-image: -webkit-linear-gradient(top, rgb(219,232,242) 39%, rgb(169,200,223) 70%);
+  background-image: -ms-linear-gradient(top, rgb(219,232,242) 39%, rgb(169,200,223) 70%);
+}
+
+.stepnum SPAN.content
+{
+  margin: 1px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  color: #ffffff;
+  background: url('/widgets/pnx/1.0/img/buttons/pnx.btns.flat.png') 0 0px repeat-x;
+  padding: 0px 3px 0px 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  height: 14px;
+  line-height: 14px;
+}

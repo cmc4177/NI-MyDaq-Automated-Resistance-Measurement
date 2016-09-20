@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* CSS Document */
+	@import"/widgets/pnx/1.0/css/base.css" ;
+	@import"/widgets/pnx/1.0/css/containers.css" ;
+	@import"/widgets/pnx/1.0/css/content-blocks.css" ;
+	@import"/widgets/pnx/1.0/css/icons.css" ;
+	@import"/widgets/pnx/1.0/css/page.css" ;
+	@import "/css/whitepaper/wp.base.css";
+/* Nothing should be floated in print. If you need something to float
+*   then it must not come on a page break. */
+body{padding:0;margin:0;background-color:#FFF;}
+.pnx-page-wrap{
+margin:0;
+padding:0;
+width:650px;
+box-shadow:none;
+}
+
+
+.global-header-nav-primary,
+.global-header-nav-secondary,
+.global-header-breadcrumb,
+.global-header-masthead .right,
+.wp-feedback,
+.global-footer,
+.no-print,
+.nibug,
+#nisurvey{
+	display:none;
+}
+
+@page {
+	size: 8.5in 11in; margin: 0.35in;	
+	
+	@bottom-center {
+		content: counter(page) "/" counter(pages);
+	}
+	@bottom-right {
+		content: "www.ni.com";
+	}
+}
+
+.pnx-page-wrap .grid12{width:7.7in;font-size:18px}
