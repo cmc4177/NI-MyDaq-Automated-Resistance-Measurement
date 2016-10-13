@@ -1,0 +1,34 @@
+/*
+ * Phoenix Content Blocks CSS
+ * @author Keegan Watkins
+ * @coauthor Levi Sitters
+ * Styles for content arrangements
+ */
+
+.pnx-media-coreblock, .pnx-media-container {/*display:table;*/}
+.pnx-media-content, .pnx-media-asset {/*vertical-align:top;display:table-cell;*/}
+/* Legacy CSS - Coreblock Layout -mg*/
+.pnx-media .pnx-media-content {	width:215px;float:left;}
+.pnx-media .pnx-media-aside {margin-left:227px;_zoom:1;}
+.pnx-media-small .pnx-media-content {float:left;width:104px;}
+.pnx-media-small .pnx-media-aside {margin-left:116px;_zoom:1;}
+.pnx-media-coreblock, .pnx-media-content, .pnx-media-container {overflow:hidden;}
+.pnx-media-asset {margin-right:12px;float:left;}
+.pnx-media-asset-right {margin-left:12px;float:right;}
+.coreBlock2col {width: 112px;height: 84px;}
+.coreBlock3col {height: 130px;width: 174px;}
+.coreBlock4col {height: 177px;width: 236px;}
+.coreBlock5col {width: 298px;height: 223px;}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .center-wrapper div:nth-child(1) div.panel-col-top-middle div.pane-entity-field div.field-item{
+        width: 150px;
+        margin-left: 15px;   
+    }
+    
+    .center-wrapper div:nth-child(3) div.panel-col-bottom-first div.pane-entity-field div.field-item{
+        width: 150px;
+        margin-left: 45px; 
+    }
+}
