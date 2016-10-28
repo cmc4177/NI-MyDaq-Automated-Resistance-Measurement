@@ -1,0 +1,26 @@
+/*
+    Author: Pablo Aviles
+    Ported over for wrapper by Levi Sitters
+*/
+
+.nisurvey-clg {
+    background-color: #EEEEEE;
+    border: 1px solid #999;
+    border-radius: 5px;
+    bottom: -3px;
+    box-shadow: 3px 3px 10px rgba(50, 50, 50, 0.35);
+    height: auto;
+    padding: 12px;
+    position: fixed;
+    right: 6px;
+    width: auto;
+    z-index: 1500;
+    display: none; /* hiding while we remove from Production FTLs*/
+}
+.nisurvey-clg .nisurvey-left-lg {
+    width: 320px;
+}
+.nisurvey-clg .nisurvey-left-lg .toolbar-text {
+    width: 310px;
+}
+

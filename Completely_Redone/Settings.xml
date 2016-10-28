@@ -1,0 +1,79 @@
+<?xml version='1.0' standalone='yes' ?>
+<LVData xmlns="http://www.ni.com/LVData">
+<Version>13.0f2</Version>
+<Cluster>
+<Name>Settings in</Name>
+<NumElts>2</NumElts>
+<Cluster>
+<Name>Hardware Configuration</Name>
+<NumElts>5</NumElts>
+<DBL>
+<Name>Max Input</Name>
+<Val>6.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Min Input</Name>
+<Val>-2.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Sample Rate</Name>
+<Val>1000.00000000000000</Val>
+</DBL>
+<Refnum>
+<Name>MCC UL IOTask</Name>
+<RefKind>.NET Refnum</RefKind>
+<DotNetType>
+<Name>ULx.IOTask, ULx_LV, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</Name>
+</DotNetType>
+<Val>0x00000000</Val>
+</Refnum>
+<Refnum>
+<Name>MCC PMD Channel</Name>
+<RefKind>Generic Tag</RefKind>
+<RefType>ULxIORefnumTag</RefType>
+<Val>Dev0/Ai0</Val>
+</Refnum>
+</Cluster>
+<Cluster>
+<Name>Logging Configuration</Name>
+<NumElts>9</NumElts>
+<Path>
+<Name>Log File Base Path</Name>
+<Val>C:\Users\Home\Documents\LabVIEW Data\Logged Data.tdms</Val>
+</Path>
+<Refnum>
+<Name>TDMS File Reference</Name>
+<RefKind>TDMS File</RefKind>
+<Val>0x00000000</Val>
+</Refnum>
+<U32>
+<Name>Samples to Save</Name>
+<Val>500</Val>
+</U32>
+<U32>
+<Name>Trigger - Time</Name>
+<Val>0</Val>
+</U32>
+<DBL>
+<Name>Trigger - Threshold</Name>
+<Val>4.00000000000000</Val>
+</DBL>
+<U32>
+<Name>Trigger - Channel</Name>
+<Val>0</Val>
+</U32>
+<Boolean>
+<Name>Enable Time Trigger</Name>
+<Val>0</Val>
+</Boolean>
+<Boolean>
+<Name>Enable Threshold Trigger</Name>
+<Val>0</Val>
+</Boolean>
+<Boolean>
+<Name>Always Log</Name>
+<Val>1</Val>
+</Boolean>
+</Cluster>
+</Cluster>
+</LVData>
